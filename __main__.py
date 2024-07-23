@@ -197,7 +197,7 @@ root.geometry("275x116")
 root.overrideredirect(True)  # Remove the default title bar
 
 # Define the path to the skin directory
-skin_path = "winamp_skin/"  # Adjust this to the correct path if needed
+skin_path = "base_skin/"  # Adjust this to the correct path if needed
 
 # Load skin images
 background_image = load_sprite_image(os.path.join(skin_path, "MAIN.BMP"))
