@@ -43,6 +43,20 @@ class Config(Singleton):
         self.save_config()
         return self.__dict__.get(key)
 
+    def read_or_create_config(self, key: str|int, default: Any):
+        """
+        Read a config value or create a new one if it does not exist
+
+        Args:
+            key: str: Key of the config
+            default: Any: Default value of the config
+        """
+        value = self.read_config(key)
+        if value is None:
+            self.add_config(key, default)
+            return default
+        return value
+
     def add_config(self, key: str|int, value: Any):
         """
         Add a new config value
