@@ -1,0 +1,23 @@
+[flake8]
+# General settings
+max-line-length = 100
+exclude =
+    .git,
+    __pycache__,
+    build,
+    dist,
+    migrations,
+    settings.py
+
+# Complexity
+max-complexity = 10
+
+# Ignore specific errors or warnings
+ignore =
+    E203,  # whitespace before ':'
+    W503,  # line break before binary operator
+    E501,  # line too long (handled by max-line-length)
+
+# Per-file-ignores
+per-file-ignores =
+    __init__.py:F401
